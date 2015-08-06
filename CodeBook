@@ -1,0 +1,81 @@
+Code Book
+
+***DATA SET***
+1. The data set was built from experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years.
+2. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) wearing a smartphone on the waist. 
+3. There are 8 files for downloading: x.train, y.train, subject.train, x.test, y.test, subject.test, features and activity labels.
+
+***DATA TRANSFORMATION***
+All steps for data transformation are explained at run_analysis.R but I also put it here:
+1. STEP 0: LOADING PACKAGES AND ALL DATA SETS
+  1.1 Setting the working directory
+  1.2 Loading neccesary libraries
+  1.3 Loading all data sets
+2. STEP 1: MERGE THE TRAINING AND TEST SETS
+2.1 First, I merge the training and test sets
+2.2 Second, we define de labels of dataset
+2.3 Third, I remove the data sets that I not use more times.
+3. STEP 2: EXTRACTING MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION
+4. STEP 3: USES DESCRIPTIVE ACTIVITY NAMES TO NAME THE ACTIVITIES IN THE DATA SET
+4.1 First, I match the activity number with its respective activity names
+4.2 Second, I remove the first column, which is the activity numbers, leaving only its respective activity names
+5. STEP 4: LABEL DATA SET WITH DESCRIPTIVE VARIABLES NAMES
+5.1 I make valid the variables names for R
+5.2 I change the names of variables 
+6. STEP 5: FROM STEP 4, I CREATE AN INDEPENDENT TIDY DATA SET WITH THE AVERAGE OF EACH VARIABLE FOR EACH ACTIVITY AND EACH SUBJECT.
+
+***TIDY DATA SET FROM STEP 4***
+The tidy data set contains 10299 observations and 81 variables:
+1. Activity label: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+2. Identifier of the subject
+3. 79 variables for signals.
+The signal variables are (".XYZ" denotes three variables, one for each axis):
+TimeDomain.BodyAcceleration.mean.XYZ
+TimeDomain.BodyAcceleration.std.XYZ
+TimeDomain.GravityAcceleration.mean.XYZ
+TimeDomain.GravityAcceleration.std.XYZ
+TimeDomain.BodyAccelerationJerk.mean.XYZ
+TimeDomain.BodyAccelerationJerk.std.XYZ
+TimeDomain.BodyAngularSpeed.mean.XYZ
+TimeDomain.BodyAngularSpeed.std.XYZ
+TimeDomain.BodyAngularAcceleration.mean.XYZ
+TimeDomain.BodyAngularAcceleration.std.XYZ
+TimeDomain.BodyAccelerationMagnitude.mean..
+TimeDomain.BodyAccelerationMagnitude.std..
+TimeDomain.GravityAccelerationMagnitude.mean..
+TimeDomain.GravityAccelerationMagnitude.std..
+TimeDomain.BodyAccelerationJerkMagnitude.mean..
+TimeDomain.BodyAccelerationJerkMagnitude.std..
+TimeDomain.BodyAngularSpeedMagnitude.mean..
+TimeDomain.BodyAngularSpeedMagnitude.std..
+TimeDomain.BodyAngularAccelerationMagnitude.mean..
+TimeDomain.BodyAngularAccelerationMagnitude.std..
+FreqDomain.BodyAcceleration.mean.XYZ
+FreqDomain.BodyAcceleration.std.XYZ
+FreqDomain.BodyAccelerationJerk.mean.XYZ
+FreqDomain.BodyAccelerationJerk.std.XYZ
+FreqDomain.BodyAngularSpeed.mean.XYZ
+FreqDomain.BodyAngularSpeed.std.XYZ
+FreqDomain.BodyAcceleration.meanFreq.XYZ
+FreqDomain.BodyAccelerationJerk.meanFreq.XYZ
+FreqDomain.BodyAngularSpeed.meanFreq.XYZ
+FreqDomain.BodyAccelerationMagnitude.mean..
+FreqDomain.BodyAccelerationMagnitude.std..
+FreqDomain.BodyBodyAccelerationJerkMagnitude.mean..
+FreqDomain.BodyBodyAccelerationJerkMagnitude.std..
+FreqDomain.BodyBodyAngularSpeedMagnitude.mean..
+FreqDomain.BodyBodyAngularSpeedMagnitude.std..
+FreqDomain.BodyBodyAngularAccelerationMagnitude.mean..
+FreqDomain.BodyBodyAngularAccelerationMagnitude.std..
+FreqDomain.BodyAccelerationMagnitude.meanFreq..
+FreqDomain.BodyBodyAccelerationJerkMagnitude.meanFreq..
+FreqDomain.BodyBodyAngularSpeedMagnitude.meanFreq..
+FreqDomain.BodyBodyAngularAccelerationMagnitude.meanFreq..
+
+
+***TIDY DATA SET FROM STEP 5 (UPLOAD FILE FOR EXERCISE)***
+The tidy data set contains 180 (30 volunteers by 6 activities) observations and 81 variables (the same as before):
+1. Activity label: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+2. Identifier of the subject
+3. 79 variables for signals.
+
