@@ -1,4 +1,4 @@
-R code
+#R code
 
 #############################################################
 #-------GETTING AND CLEANING DATA - FINAL PROJECT-----------#
