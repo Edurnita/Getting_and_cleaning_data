@@ -55,5 +55,5 @@ names(base.mean.sd) <- gsub('Mag',"Magnitude",names(base.mean.sd))
 ## OF EACH VARIABLE FOR EACH ACTIVITY AND EACH SUBJECT.
 
 tidy_dataset <- ddply(base.mean.sd, c("Subject","Activity"), numcolwise(mean))
-write.table(tidy_dataset, file = "tidy_dataset.txt")
+write.table(tidy_dataset, file = "tidy_dataset.txt", row.name=FALSE)
 
